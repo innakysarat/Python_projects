@@ -1,6 +1,5 @@
 from collections import Counter
 
-
 class CountVectorizer():
     def __init__(self):
         self.count_matrix = list()
@@ -15,6 +14,16 @@ class CountVectorizer():
             for word, count in counter.items():
                 one_matrix[feature_position[word]] = count
             self.count_matrix.append(one_matrix)
+        return self.count_matrix
+
+    def fit_transform_another_version(self, corpus):
+        CountVectorizer.split(self, corpus)
+        for one_text in corpus:
+            count_matrix = {feature: 0 for position, feature in enumerate(self.feature_names)}
+            words_in_one_text = CountVectorizer.split_one_text(one_text)
+            for word in words_in_one_text:
+                count_matrix[word] = count_matrix.get(word, 0) + 1
+            self.count_matrix.append(count_matrix)
         return self.count_matrix
 
     @staticmethod
@@ -38,6 +47,6 @@ if __name__ == '__main__':
         'Pasta Pomodoro Fresh ingredients Parmesan to taste'
     ]
     vectorizer = CountVectorizer()
-    count_matrix = vectorizer.fit_transform(corpus)
+    count_matrix = vectorizer.fit_transform_another_version(corpus)
     print(vectorizer.get_feature_names())
     print(count_matrix)
