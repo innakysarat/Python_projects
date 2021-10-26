@@ -2,8 +2,7 @@ from collections import Counter
 
 
 class CountVectorizer():
-    def __init__(self, lowercase=True):
-        self.lowercase = lowercase
+    def __init__(self):
         self.count_matrix = list()
         self.feature_names = []
 
