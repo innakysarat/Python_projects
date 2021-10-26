@@ -23,7 +23,8 @@ class CountVectorizer():
             words_in_one_text = CountVectorizer.split_one_text(one_text)
             for word in words_in_one_text:
                 count_matrix[word] = count_matrix.get(word, 0) + 1
-            self.count_matrix.append(count_matrix)
+            values = count_matrix.values()
+            self.count_matrix.append(values)
         return self.count_matrix
 
     @staticmethod
