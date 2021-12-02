@@ -1,0 +1,12 @@
+collected 3 items                                                                                                                                                                      
+
+issue-05/test_year_mock.py::test_year PASSED                                                                                                                                     [ 33%]
+issue-05/test_year_mock.py::test_year_another_format PASSED                                                                                                                      [ 66%]
+issue-05/test_year_mock.py::test_year_wrong_format PASSED                                                                                                                        [100%]
+
+----------- coverage: platform win32, python 3.8.8-final-0 -----------
+Coverage HTML written to dir htmlcov
+
+
+================================================================================== 3 passed in 0.59s ==================================================================================
+
