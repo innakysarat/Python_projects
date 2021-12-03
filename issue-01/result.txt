@@ -1,4 +1,3 @@
-python -m doctest -v -o NORMALIZE_WHITESPACE issue-01/test_encode.py
 Trying:
     encode('MAI-PYTHON-2019')
 Expecting:
