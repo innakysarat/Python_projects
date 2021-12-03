@@ -44,6 +44,3 @@ def decode(morse_message: str) -> str:
     ]
 
     return ''.join(decoded_letters)
-
-# if __name__ == '__main__':
-#     print(encode('HELLO-AAA'))
